@@ -1,26 +1,28 @@
-@import "./reset.css";
-@import "./graph.css";
-@import "./timeline.css";
-
 :root {
   --bg-dark: hsl(0, 0%, 4%);
   --bg: hsl(0, 0%, 7%);
   --bg-light: hsl(0, 0%, 14%);
 
   /* Temporary Accent Colors */
-  --primary: hsl(201, 69%, 43%);
-  --secondary: hsl(255, 69%, 31%);
+  --clr-primary: hsl(202, 47%, 50%);
+  --clr-secondary: hsl(259, 71%, 58%);
 
-  --text-color: hsl(0, 0%, 93%);
-  /* Temp dimmed values */
-  --text-dimmed: hsl(0, 0%, 70%); 
+  --clr-danger: hsl(359, 72%, 50%);
+
+  /* Timeline Card Borders */
+  --clr-card-1: #d0b579;
+  --clr-card-2: #d07979;
+  --clr-card-3: #79d089;
+  --clr-card-4: #7981d0;
 
   --font-family: "Manrope", sans-serif;
-  --h2-size: 18px;
-  --h2-style: bold;
+
+  --text-color: hsl(0, 0%, 93%);
+  --text-dimmed: hsl(0, 0%, 70%); /* temp dimmed value */
 
   --normal-gap: 20px;
-  --normal-br: 10px;
+  --normal-br: 10px; /* br for border radius */
+  --normal-shadow: 4px 4px 12px hsla(0, 0%, 0%, 0.25); /* box-shadow */
 }
 
 body {
@@ -34,6 +36,31 @@ body {
   font-style: normal;
 }
 
+/* ===== TEMP Text Levels ===== */
+/* affects: Section Titles */
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* affects: Graph Area Titles */
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* affects: Timeline Buttons */
+button {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.timeline-card {
+  font-size: 0.938rem;
+  font-weight: 500;
+}
+/* ============================ */
+
 #main-container {
   height: 100vh;
   width: auto;
@@ -44,6 +71,7 @@ body {
   gap: var(--normal-gap);
 }
 
+/* The graph and timeline sections containers */
 .section-container {
   display: flex;
   align-items: center;
@@ -51,21 +79,13 @@ body {
   gap: calc(var(--normal-gap) / 2);
 }
 
-.section-title {
-  font-size: var(--h2-size);
-  font-style: var(--h2-style);
-}
-
+/* The main sections' bg boxes */
 .bg-box {
+  height: 825px;
+
   background-color: var(--bg);
   border-radius: calc(var(--normal-br) * 1.5);
-  height: 825px;
-}
+  padding: var(--normal-gap);
 
-#graph-section .bg-box {
-  width: 925px;
-}
-
-#timeline-section .bg-box {
-  width: 450px;
+  box-shadow: var(--normal-shadow);
 }

@@ -1,0 +1,29 @@
+#graph-section .bg-box {
+  width: 925px;
+
+  display: grid;
+  gap: var(--normal-gap);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* Graph Section Items */
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.graph-container > h3 {
+  line-height: 1;
+  margin-bottom: calc(var(--normal-gap) / 2);
+}
+
+.graph-bg-box {
+	flex: 1;
+	width: 100%;
+
+  background-color: var(--bg-light);
+  border-radius: var(--normal-br);
+  /* box-shadow: var(--normal-shadow); */
+}

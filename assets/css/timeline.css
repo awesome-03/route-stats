@@ -1,0 +1,85 @@
+#timeline-section .bg-box {
+  width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Timeline Cards */
+#timeline-card-container {
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--normal-gap)/2);
+}
+
+.timeline-card {
+  height: 50px;
+  border: 1px solid;
+
+  background-color: var(--bg-light);
+  border-radius: var(--normal-br);
+  box-shadow: var(--normal-shadow);
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* TEMP card borders */
+.timeline-card:nth-child(1) { border-color: var(--clr-card-1); }
+.timeline-card:nth-child(2) { border-color: var(--clr-card-2); }
+.timeline-card:nth-child(3) { border-color: var(--clr-card-3); }
+.timeline-card:nth-child(4) { border-color: var(--clr-card-4); }
+
+/* Timeline Buttons */
+#timeline-buttons-container {
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timeline-button {
+  height: 42px;
+  border-radius: var(--normal-br);
+  box-shadow: var(--normal-shadow);
+
+  transition: box-shadow 0.25s ease-out, transform 0.12s ease;
+}
+
+#delete-button {
+  --button-color: var(--clr-danger);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  background-color: var(--button-color);
+}
+
+#delete-button img {
+  width: 32px;
+  height: 32px;
+}
+
+#edit-button {
+  --button-color: var(--clr-primary);
+  background-color: var(--button-color);
+  padding: 0px 32px;
+}
+
+/* button animations */
+.timeline-button:hover {
+  box-shadow: 0 0 10px var(--button-color);
+}
+
+.timeline-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 5px var(--button-color);
+}

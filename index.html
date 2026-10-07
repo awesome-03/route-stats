@@ -13,30 +13,98 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script type="module" src="assets/js/main.js"></script>
+  <!-- CSS/JS -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/graph.css">
+  <link rel="stylesheet" href="./assets/css/timeline.css">
+
+  <script type="module" src="./assets/js/main.js"></script>
 
   <title>RouteStats</title>
 </head>
 
 <body>
-  <div id="main-container">
-    <!-- GRAPH -->
-    <div id="graph-section" class="section-container">
-      <h2 class="section-title">Graph</h2>
-      <div class="bg-box">
-        <!-- Graph Items Here -->
-      </div>
-    </div>
+  <section>
+    <div id="main-container">
+      <!-- GRAPH -->
+      <div id="graph-section" class="section-container">
+        <h2>Graph</h2>
+        <div class="bg-box">
+          <!-- Graph Section Items -->
+          <div class="graph-container">
+            <h3>Piglin Count</h3>
+            <div class="graph-bg-box"></div>
+          </div>
 
-    <!-- TIMELINE -->
-    <div id="timeline-section" class="section-container">
-      <h2 class="section-title">Timeline</h2>
-      <div class="bg-box">
-        <!-- Timeline Items Here -->
+          <div class="graph-container">
+            <h3>Barter Count</h3>
+            <div class="graph-bg-box"></div>
+          </div>
+
+          <div class="graph-container">
+            <h3>Block Count</h3>
+            <div class="graph-bg-box"></div>
+          </div>
+
+          <div class="graph-container">
+            <h3>Temp Count</h3>
+            <div class="graph-bg-box"></div>
+          </div>
+
+          <div class="graph-container">
+            <h3>Temp Count</h3>
+            <div class="graph-bg-box"></div>
+          </div>
+
+          <div class="graph-container">
+            <h3>Route Stats</h3>
+            <div class="graph-bg-box"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div id="timeline-section" class="section-container">
+        <h2>Timeline</h2>
+        <div class="bg-box">
+
+          <div id="timeline-card-container">
+            <!-- Timeline Section Cards -->
+            <div class="timeline-card">
+              <p>Gold: 13 ingots</p>
+              <p>Text: woaw</p>
+            </div>
+
+            <div class="timeline-card">
+              <p>Piglins: 8</p>
+              <p>Time: 19s</p>
+            </div>
+
+            <div class="timeline-card">
+              <p>Gold: 13 ingots</p>
+              <p>Text: woaw</p>
+            </div>
+
+            <div class="timeline-card">
+              <p>Gold: 13 ingots</p>
+              <p>Text: woaw</p>
+            </div>
+
+          </div>
+
+          <div id="timeline-buttons-container">
+            <button id="delete-button" class="timeline-button" aria-label="Delete button">
+              <img src="./assets/img/trash_icon.png" alt="">
+            </button>
+            <button id="edit-button" class="timeline-button" aria-label="Edit Button">Edit</button>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </body>
 
 </html>
